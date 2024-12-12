@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/batches
+    username: postgres
+    password: postgres
+
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 50
