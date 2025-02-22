@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
-import ru.kre4.batches.entity.DummyEntity;
-import ru.kre4.batches.entity.DummyWithSeqEntity;
-import ru.kre4.batches.repository.DummyEntityRepository;
-import ru.kre4.batches.repository.DummyWithSeqEntityRepository;
+import ru.kre4.batches.entity.batchshowcase.DummyEntity;
+import ru.kre4.batches.entity.batchshowcase.DummyWithSeqEntity;
+import ru.kre4.batches.repository.batchshowcase.DummyEntityRepository;
+import ru.kre4.batches.repository.batchshowcase.DummyWithSeqEntityRepository;
 import ru.kre4.batches.utlis.DummyFactory;
 import ru.kre4.batches.utlis.DummyWithSeqFactory;
 

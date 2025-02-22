@@ -1,4 +1,4 @@
-package ru.kre4.batches.entity;
+package ru.kre4.batches.entity.batchshowcase;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,20 +10,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "dummy")
+@Table(name = "dummy_with_seq")
 @Getter
 @Setter
-public class DummyEntity {
+public class DummyWithSeqEntity {
 
     @Id
     @SequenceGenerator(
-            name = "default_generator",
-            sequenceName = "dummy_id_seq",
-            allocationSize = 1
+            name = "step_50_generator",
+            sequenceName = "dummy_id_sequence",
+            initialValue = 100
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "default_generator"
+            generator = "step_50_generator"
     )
     private Long id;
 

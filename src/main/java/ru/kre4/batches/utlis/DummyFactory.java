@@ -1,6 +1,6 @@
 package ru.kre4.batches.utlis;
 
-import ru.kre4.batches.entity.DummyEntity;
+import ru.kre4.batches.entity.batchshowcase.DummyEntity;
 
 import java.util.UUID;
 
