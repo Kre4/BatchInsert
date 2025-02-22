@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "dummy")
+@Table(name = "dummy_with_seq")
 @Getter
 @Setter
 public class DummyWithSeqEntity {
