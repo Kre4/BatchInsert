@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
+import org.springframework.transaction.annotation.Transactional;
 import ru.kre4.batches.entity.DummyEntity;
 import ru.kre4.batches.entity.DummyWithSeqEntity;
 import ru.kre4.batches.repository.DummyEntityRepository;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @SpringBootTest(properties = {"spring.cache.type=NONE"})
 @Sql(scripts = {"classpath:clean.sql"})
+@Transactional
 public abstract class InsertTest {
 
     @Autowired
@@ -48,7 +50,8 @@ public abstract class InsertTest {
     void testSaveAllThousandDummyWithSeqEntity() {
         DummyWithSeqFactory factory = new DummyWithSeqFactory();
         List<DummyWithSeqEntity> generatedList = factory.createEntityList(1000);
-        dummyWithSeqEntityRepository.saveAll(generatedList);
+        var result = dummyWithSeqEntityRepository.saveAll(generatedList);
+        dummyWithSeqEntityRepository.flush();
     }
 
 }
