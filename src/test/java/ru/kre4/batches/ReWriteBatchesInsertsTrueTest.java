@@ -21,6 +21,23 @@ public class ReWriteBatchesInsertsTrueTest extends InsertTest {
      */
 
     /**
+     * uuid
+     * 2025-07-26T20:51:24.489+03:00  INFO 25952 --- [           main] i.StatisticalLoggingSessionEventListener : Session Metrics {
+     *     11700 nanoseconds spent acquiring 1 JDBC connections;
+     *     0 nanoseconds spent releasing 0 JDBC connections;
+     *     2220779 nanoseconds spent preparing 1000 JDBC statements;
+     *     109399495 nanoseconds spent executing 1000 JDBC statements;
+     *     0 nanoseconds spent executing 0 JDBC batches;
+     *     0 nanoseconds spent performing 0 L2C puts;
+     *     0 nanoseconds spent performing 0 L2C hits;
+     *     0 nanoseconds spent performing 0 L2C misses;
+     *     150045500 nanoseconds spent executing 1 flushes (flushing a total of 1000 entities and 0 collections);
+     *     0 nanoseconds spent executing 0 pre-partial-flushes;
+     *     0 nanoseconds spent executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+     * }
+     */
+
+    /**
      * sequence + 1
      * 14100 nanoseconds spent acquiring 1 JDBC connections;
      *     0 nanoseconds spent releasing 0 JDBC connections;
